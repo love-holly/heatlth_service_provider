@@ -35,9 +35,9 @@ public class CheckGroupServiceImpl implements CheckGroupService {
     @Override
     public void add(CheckGroup checkGroup, Integer[] checkitemIds) {
       checkGroupDao.add(checkGroup);
-        System.out.println("haaaaaaaaaaaaa");
+
         Integer checkgroup_id = checkGroup.getId();
-        System.out.println(checkgroup_id+"qqqqqqqqqqq");
+
         this.addById(checkgroup_id,checkitemIds);
       /*  if (checkitemIds!=null&&checkitemIds.length>0) {
             for (Integer checkitem_id : checkitemIds) {

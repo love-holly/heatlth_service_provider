@@ -54,4 +54,8 @@ public interface SetmealDao {
 
    })
     Setmeal findById( Integer id);
+
+
+   @Select("SELECT s.`name`,COUNT(o.`id` ) as value FROM t_setmeal s,t_order o WHERE s.`id`=o.`setmeal_id` GROUP BY s.`name`")
+    List<Map<String,Object>> findSetmealCount();
 }

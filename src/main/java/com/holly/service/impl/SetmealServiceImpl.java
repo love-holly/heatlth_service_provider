@@ -93,6 +93,19 @@ public class SetmealServiceImpl implements SetmealService {
     }
 
 
+    /**
+     * 获取会员套餐数据
+     * @return
+     */
+    @Override
+    public List<Map<String, Object>> findSetmealCount() {
+
+        List<Map<String, Object>> mapList=setmealDao.findSetmealCount();
+
+        return mapList;
+    }
+
+
     public void addById(Integer setmealId,Integer[] checkgroupIds){
 
         if(checkgroupIds!=null&&checkgroupIds.length>0){

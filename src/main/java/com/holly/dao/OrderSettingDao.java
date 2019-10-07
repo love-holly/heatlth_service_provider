@@ -42,4 +42,7 @@ public interface OrderSettingDao {
             "</script>"
     })
     void insertList(@Param(value="orderSettingList")List<OrderSetting> orderSettingList);
+
+    @Update("update t_ordersetting set reservations=#{reservations} where orderDate=#{orderDate}")
+    public void editReservationsByOrderDate(OrderSetting orderSetting);
 }
